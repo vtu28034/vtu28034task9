@@ -1,0 +1,14 @@
+try:
+    # Attempt to get the initial investment amount from the user
+    initial_investment = float(input("Enter the initial investment amount: "))
+    # Attempt to get the final investment amount from the user
+    final_investment = float(input("Enter the final investment amount: "))
+    # Calculate the return on investment (ROI)
+    roi = (final_investment - initial_investment) / initial_investment * 100
+    print("Return on Investment (ROI): {:.2f}".format(roi))
+except ValueError:
+    # Handle the ValueError exception
+    print("Error: Please enter a valid numeric value for the investment amount.")
+except ZeroDivisionError:
+    # Handle the ZeroDivisionError exception
+    print("Error: Initial investment amount cannot be zero.")
